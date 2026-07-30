@@ -410,10 +410,10 @@
 //     name: "Vineet",
 
 //     greet() {
-      
+
 
 //         function inner() {
-         
+
 
 //             const arrow = () => {
 //                 console.log(this.name);
@@ -436,7 +436,7 @@
 //     greet() {
 
 //         const self = this;
-       
+
 
 //         function inner() {
 
@@ -452,12 +452,61 @@
 
 // person.greet();
 
-function greet(){
-    console.log(this.name)
-}
+// function greet(){
+//     console.log(this.name)
+// }
 
-const person = {
-    name:"Vineet"
-};
+// const person = {
+//     name:"Vineet"
+// };
 
-greet();
+// greet();
+
+
+// class Person {
+//     constructor(name, job, age) {
+//         this.name = name;
+//         this.job = job;
+//         this.age = age;
+//     }
+//     greet() {
+//         console.log(`Hello ${this.name}`)
+//     }
+// }
+// const boy1 = new Person("Vineet", "SWE", 21);
+// const boy2 = new Person("Aman", "JE", 24);
+// console.log(boy1);
+// boy1.greet();
+// console.log(boy2);
+// boy2.greet();
+
+// const obj = {
+//     name:"Vineet",
+//     age:21
+// }
+
+// console.log(Object.keys(obj))
+
+
+// const person = new Object();
+
+// person.firstName = "Vineet";
+// person.lastName = "Pal";
+// person.age = 21;
+
+// person.firstName = "Aman"
+// person.prototype.
+
+// console.log(person.firstName);
+
+// const obj = {
+//     name:"Vineet",
+//     age:21
+// }
+// console.log(Object.values(obj))
+
+// const obj = {
+//     name:"Vineet",
+//     age:21
+// }
+// console.log(Object.entries(obj))
