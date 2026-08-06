@@ -228,16 +228,322 @@
 // let ans = new Array(arr.length * 2);
 
 
-function getConcatenation(nums) {
-    let ans = [];
+// function getConcatenation(nums) {
+//     let ans = [];
 
-    for (let i = 0; i < 2; i++) {
-       
-        for (let num of nums) {
-            ans.push(num)
-            
-        }
-    }
-    return ans
+//     for (let i = 0; i < 2; i++) {
+
+//         for (let num of nums) {
+//             ans.push(num)
+
+//         }
+//     }
+//     return ans
+// }
+// console.log(getConcatenation([1, 2, 3, 4]))
+
+
+// // const numbers = [10,20,30];
+
+// // numbers.forEach(function(num){
+// //     console.log(num);
+// // });
+// let numbers = [10,20,30]
+// for(let i = 0; i < numbers.length; i++){
+//     callback(numbers[i], i, numbers);
+// }
+
+
+// function getConcatenation(nums) {
+//     let ans = [];
+
+//     for(let i=0;i<2;i++){
+//         for(let num of nums){
+//             ans.push(num)
+//         }
+//     } return ans
+// }
+// console.log(getConcatenation([1,2,3,4]))
+
+
+// let arr = [1,2,3,4];
+
+// let dbl = arr.map(num=>num*2);
+
+// console.log(dbl);
+// console.log(arr);
+
+// let arr = [1,2,3,4];
+
+// let even = arr.filter(n=>n%2===0);
+// console.log(even);
+// console.log(arr);
+
+
+// let arr = [1,3,5,7];
+
+// let match = arr.some(n=>n%2===0);
+// console.log(match)
+
+// let arr = [2,4,6,9];
+// let match = arr.every(n=>n%2===0);
+// console.log(match)
+
+
+// function flatten(arr) {
+//    return arr.reduce((flat, toFlatten) =>
+//        flat.concat(Array.isArray(toFlatten) ? flatten(toFlatten) : toFlatten)
+//     , [])
+// }
+// console.log(flatten([1, 2, [3, 4, [5, 6]]]))
+
+// let arr = [1, 2, [3, 4, [5, 6]]]
+// const faltten = arr.flat(2);
+// console.log(faltten)
+
+// function frequencyCounter(arr) {
+//     const counter = arr.reduce((acc,num)=>{
+//         acc[num] = (acc[num] || 0) + 1
+//     return acc;
+// },{})  
+// return counter
+// }
+// console.log(frequencyCounter([1,2,3,4,5,6,7,8,9,1,2,3,4,5]))
+
+// function intersection(arr1, arr2) {
+//     const set1 = new Set(arr1);
+//     const set2 = new Set(arr2);
+//     return insertectionSet = arr1.filter(values=>set2.has(values));
+
+// }
+// console.log(intersection([1,2,3,4,5],[4,3,6,7,8]))
+
+
+// const array = [1, 2, 3, 4, 5];
+// const allUnique = new Set(array).size === array.length;
+// console.log(allUnique);
+
+
+// function twoSum(nums, target) {
+
+//     for (let i = 0; i < nums.length; i++) {
+
+//         for (let j = i + 1; j < nums.length; j++) {
+//             sum = nums[i] + nums[j]
+//             if (sum === target) {
+//                return [i, j]
+//             }
+//         }
+//     }
+// }
+// console.log(twoSum([2, 7, 11, 15], 9))
+
+
+// function isAnagram(s,t){
+//     if(s.length !== t.length){
+//         return false
+//     }
+//     let table = {};
+
+//     for(let i=0;i<s.length;i++){
+//         let char = s[i];
+
+//         if(table[char]){
+//             table[char]++;
+//         }else{
+//             table[char] = 1
+//         }
+//     }
+//     for(let i=0;i<t.length;i++){
+//         let char = t[i]
+
+//         if(!table[char]){
+//             return false
+//         }
+//         table[char]--;
+//     }
+//     return true
+// }
+// console.log(isAnagram("vineet","eeilvt"))
+
+// let strs = ['hat','cat','act',"pots","stop","tops"];
+
+// let strssort = strs.map(str=>str.split('').sort().join(''));
+
+// function groupAnagrams(strs) {
+//     let group = {};
+
+//     for(let word of strs){
+//         let key = word.split('').sort().join('');
+
+//         if(!group[key]){
+//             group[key] = []
+//         }
+//             group[key].push(word);
+
+//     }
+//     return Object.values(group);
+
+// }
+
+// console.log(groupAnagrams(['hat','cat','act',"pots","stop","tops"]))
+
+
+// let arr = [10,30,20,50,40];
+
+// const result = arr.sort();
+// console.log(result)
+
+// console.log(arr.sort())
+
+
+// console.log(
+// ["10","30","20"].sort()
+// );
+
+// function anagram(strs) {
+
+//     const result = strs.reduce((acc, str) => {
+//         let group = {};
+//         // acc[str] = (acc[str] || 0)+1;
+
+
+//         for (let char of str) {
+
+//             group[char] = (group[char] || 0) + 1
+
+//         } 
+//         acc[str] = group;
+//         return acc;
+
+//     }, {});
+//     return result;
+// }
+// console.log(anagram(["apple", "Banana", "apple", "orange", "Banana"]))
+
+
+// let arr = [1,3,4,2]
+
+// const fart = arr.sort();
+// console.log(arr)
+// console.log(fart)
+
+// let arr = [1,3,4,2]
+// const result = arr.sort((a,b)=>a-b);
+// console.log(result)
+
+
+// let users = [
+//     {name:"Vineet",active:true},
+//     {name:"Aman",active:false},
+//     {name:"Ayush",active:true},
+//     {name:"Sourabh",active:false},
+//     {name:"Guddu",active:true}
+// ]
+// const result = users
+// .filter(user=>user.active)
+// .map(user=>user.name)
+// .sort()
+
+// console.log(result)
+
+
+// let arr = [1,2,3];
+
+// let result = arr.splice(1,2);
+// console.log(result)
+// console.log(arr)
+
+
+
+// const users = [
+//     { name: "A", age: 21, active: true },
+//     { name: "B", age: 17, active: false },
+//     { name: "C", age: 25, active: true },
+//     { name: "D", age: 16, active: true }
+// ];
+
+// const reult = users
+// .filter(user=>user.active&&user.age>=18)
+// .map(user=>user.name)
+// .sort()
+
+// console.log(reult)
+
+
+// let str = "vineet"
+// // str[0] = "A"
+// // console.log(str)
+
+// let name = "A" + str.slice(1);
+// console.log(name);
+// console.log(str)
+
+// let a ="7"
+// console.log(a*2)
+
+
+// let name = "Vineet"
+
+// let upper = name.toUpperCase();
+// console.log(upper);
+// console.log(name)
+
+// console.log(name.toUpperCase());
+// console.log(name)
+
+// let name = "Vineet"
+
+// let diff = name.split("")
+// console.log(diff)
+
+
+// const str = "  Hello World  ";
+
+// console.log(str.trim());
+// console.log(str.length);
+
+// let name = "vineet";
+
+// let arr = name.split("");
+// let temp = "";
+
+// for (let i = 0; i < arr.length / 2; i++) {
+//   let j = arr.length - 1 - i;
+
+//   temp = arr[i];
+//   arr[i] = arr[j];
+//   arr[j] = temp;
+// }
+
+// console.log(arr);         
+// console.log(arr.join("")); 
+
+
+// function reverseString(str) {
+//     let reverse = str.split("");
+//     let temp = "";
+//     for(let i=0;i<reverse.length/2;i++){
+//         let j = reverse.length - 1 - i;
+//         temp = reverse[i];
+//         reverse[i] = reverse[j];
+//         reverse[j] = temp;
+
+//     }
+//     if(reverse.join("")===str){
+//         return true
+//     }
+//     return false
+
+// }
+// console.log(reverseString("madam"))
+// console.log(reverseString("hello"))
+
+
+function frequencyCounter(str) {
+    let group = {};
+    for(let char of str){
+        group[char] = (group[char]||0)+1;
+    } return group
 }
-console.log(getConcatenation([1, 2, 3, 4]))
+console.log(frequencyCounter("banana"));
