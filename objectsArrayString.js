@@ -305,7 +305,7 @@
 //     const counter = arr.reduce((acc,num)=>{
 //         acc[num] = (acc[num] || 0) + 1
 //     return acc;
-// },{})  
+// },{})
 // return counter
 // }
 // console.log(frequencyCounter([1,2,3,4,5,6,7,8,9,1,2,3,4,5]))
@@ -412,7 +412,7 @@
 
 //             group[char] = (group[char] || 0) + 1
 
-//         } 
+//         }
 //         acc[str] = group;
 //         return acc;
 
@@ -516,8 +516,8 @@
 //   arr[j] = temp;
 // }
 
-// console.log(arr);         
-// console.log(arr.join("")); 
+// console.log(arr);
+// console.log(arr.join(""));
 
 
 // function reverseString(str) {
@@ -540,10 +540,161 @@
 // console.log(reverseString("hello"))
 
 
-function frequencyCounter(str) {
-    let group = {};
-    for(let char of str){
-        group[char] = (group[char]||0)+1;
-    } return group
-}
-console.log(frequencyCounter("banana"));
+// function frequencyCounter(str) {
+//     let group = {};
+//     for(let char of str){
+//         group[char] = (group[char]||0)+1;
+//     } return group
+// }
+// console.log(frequencyCounter("banana"));
+
+
+// function reverseString(str) {
+//     let reverse = str.split("");
+//     let left = 0;
+//     let right = reverse.length - 1;
+//     let temp ="";
+
+//     while(left<right){
+//         temp = reverse[left];
+//         reverse[left] = reverse[right];
+//         reverse[right] = temp;
+//         left++;
+//         right--;
+
+//     } return reverse.join("");
+
+// }
+// console.log(reverseString("hello"));
+
+// function checkPalindrome(str) {
+//     let left = 0;
+//     let right = str.length - 1;
+//      while (left < right) {
+//     if (str[left] !== str[right]) {
+//       return false;
+//     }
+//     left++;
+//     right--;
+//   }
+//   return true;
+// }
+// console.log(checkPalindrome("madam"));
+
+
+// function frequencyCounter(str) {
+//     let group = {};
+//     for(let char of str){
+//         if(!group[char]){
+//             group[char] = 0;
+//         }
+//         group[char]++;
+//     }
+//     return group;
+// }
+// console.log(frequencyCounter("banana"));
+
+
+// function firstNonRepeatingCharacter(str) {
+//     let group = {};
+//     let start = 0;
+//     for (let char of str) {
+//         if (!group[char]) {
+//             group[char] = 0;
+//         }
+//         group[char]++;
+
+//     }
+//     for (let char of str) {
+//         if (group[char] === 1) {
+//             return char;
+//         }
+//     }
+
+//     return null;
+// }
+// console.log(firstNonRepeatingCharacter("aabccdeff"));
+
+
+// function isAnagram(s, t) {
+//     let group = {};
+//     if(s.length !== t.length){
+//         return false
+//     }
+//     for(let char of s){
+//         if(!group[char]){
+//             group[char] = 0;
+//         }
+//         group[char]++
+//     }
+
+//     for(let char of t){
+//         if(!group[char]){
+//             return false
+//         }
+//         group[char]--
+//     } return true
+// }
+// console.log(isAnagram("vineet","ineevt"));
+
+
+
+// function removeDuplicate(str){
+//     let group = {};
+
+//     for(let char of str){
+//         if(!group[char]){
+//             group[char] = 0;
+//         }
+//         group[char]++
+//     }
+
+//     for(let char of str){
+//         if(!group[char]){
+//             return false
+//         }
+//         if(group[char]>1){
+//             group[char]--
+//         }
+//     } return group
+// }
+// console.log(removeDuplicate("programming"));
+
+
+// function removeDuplicate(str){
+//     let result = '';
+//     let group = {};
+
+//     for(let char of str){
+//         if(!group[char]){
+//             result +=char;
+//             group[char] =true
+//         }
+//     }return result
+// }
+// console.log(removeDuplicate("programming"))
+
+
+// function mostFrequent(str) {
+//     let maxCount = 0;
+//     let maxChar = "";
+//     let group = {};
+
+//     for (let char of str) {
+//         if (!group[char]) {
+//             group[char] = 0;
+//         }
+//         group[char]++
+//     }
+
+//     for (let char of str) {
+//         if (group[char] > maxCount) {
+//             maxCount = group[char]
+//             maxChar = char;
+//         }
+//     } return maxChar
+// }
+// console.log(mostFrequent("vineet"))
+
+
+
