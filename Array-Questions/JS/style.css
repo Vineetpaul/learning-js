@@ -1,4 +1,4 @@
-*{
+/* *{
     margin: 0;
     padding: 0;
      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -46,7 +46,7 @@ body{
     align-items: center;
     justify-content: space-between;
 } */
-.nav-list{
+/* .nav-list{
     display: flex;
     align-items: center;
     gap:30px;
@@ -132,4 +132,4 @@ body{
     .navigation{
         display:none;
     }
-}
+} */ 

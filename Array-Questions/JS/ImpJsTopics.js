@@ -324,7 +324,7 @@
 //     console.log("First line")
 //     const prom = await Promise.resolve("Inside await")
 //     console.log(prom)
-    
+
 //     console.log("Third line")
 //     setTimeout(() => {
 //         console.log("Nested Timeout")
@@ -350,3 +350,53 @@
 // },1000)
 // }
 // )
+
+
+// function isAnagram(s, t){
+//     if(s.length !== t.length){
+//         return false
+//     }
+//     let table = {};
+
+//     for(let char of s){
+//         if(table[char]){
+//             table[char]++
+//         }
+//         table[char] = 1
+//     }
+//     for(let char of t){
+//         if(!table[char]){
+//             return false
+//         }
+//         table[char]--
+//     }
+//     return true
+// }
+// console.log(isAnagram("race","carj"))
+
+// function checkDuplicate(arr){
+//     let set = arr.Set();
+//     console.log(set)
+// }
+// console.log(checkDuplicate([1,2,3,4,2,3]))
+
+// const set = new Set([1,2,3,5,3,4,5]);
+// console.log(set)
+
+// async function apiFetch() {
+//     try {
+//         const url = "https://jsonplaceholder.typicode.com/todos/1";
+//         let response = await fetch(url);
+//         response = await response.json();
+//         console.log(response);
+//         alert("First Api call is done");
+//     }catch(error){
+//         console.log(error.message)
+//         alert(error.message+" your first api please check url")
+//     }
+//     finally{
+//         console.log("Your loader is disabled")
+//     }
+// }
+// apiFetch();
+
