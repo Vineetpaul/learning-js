@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Greet = ({ user, onClick}) => {
     const { name, age } = user
     return (

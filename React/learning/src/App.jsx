@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Greet from './Greet'
 import Counter from "./Counter"
 import Login from './Pages/Login'
+import Effects from './Components/Effects'
 
 const App = () => {
-  // const [isloggedIn, setIsLoggedIn] = useState(false)
+  const [isloggedIn, setIsLoggedIn] = useState(false)
 
 
   const user = {
@@ -22,14 +23,12 @@ const App = () => {
       <Greet user={user} onClick={handleClick} />
       <Counter />
       {/* {isLoggedIn ? <Login /> : alert("Please login first")} */}
-      {/* {
-        isloggedIn ? <Login />
-          : alert("Please login first")
-      }
-      {isloggedIn ? alert("Welcome")
-        : <button onClick={() => setIsLoggedIn(!isloggedIn)}>Login</button>
-      } */}
-      
+      {!isloggedIn && <button onClick={() => setIsLoggedIn(true)}>Login</button>}
+      {isloggedIn && <Login />}
+      {isloggedIn && <div>Welcome</div>}
+
+      <Effects />
+
 
     </div>
   )

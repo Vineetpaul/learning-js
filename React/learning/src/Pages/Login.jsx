@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 
 const Login = () => {
     const [name, setName] = useState("");
@@ -14,12 +14,14 @@ const Login = () => {
     <div>
       <form onSubmit={handleSubmit}>
         <input 
+        type="name"
       value={name}
        placeholder='Enter you username'
        onChange={(event)=>{setName(event.target.value)}}
        ></input>
 
       <input 
+      type="password"
       value={password} 
       placeholder='Enter your password'
       onChange={(event)=>{setPassword(event.target.value)}}
