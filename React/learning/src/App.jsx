@@ -5,9 +5,14 @@ import Login from './Pages/Login'
 import Effects from './Components/Effects'
 import Productapicall from './Components/Productapicall'
 import Navbar from './Components/Navbar'
+import Receiver from './Context/Receiver'
+import Profile from './Context/Profile'
+import Refhook from './Components/Refhook'
+import UserContext from './Context/UserContext'
 import ProtectedRoute from './Routes/ProtectedRoute'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Notfound from './Pages/Notfound'
+import AuthDemo from './Components/AuthDemo'
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
@@ -26,7 +31,7 @@ const App = () => {
       <div>
         <Navbar />
         <Routes>
-          
+
           <Route path="/" element={<ProtectedRoute isAuthenticated={isLoggedIn}><Greet user={user} onClick={handleClick} /> </ProtectedRoute>} />
           <Route path="/counter" element={<Counter />} />
           <Route
@@ -44,7 +49,11 @@ const App = () => {
           />
           <Route path="/effects" element={<ProtectedRoute isAuthenticated={isLoggedIn}><Effects /></ProtectedRoute>} />
           <Route path="/products/:id" element={<Productapicall />} />
-          <Route path="*" element={<Notfound/>}/>
+          <Route path="/context" element={<UserContext.Provider value={user}><Receiver /></UserContext.Provider>} />
+          <Route path="/profile" element={<UserContext.Provider value={user}><Profile /></UserContext.Provider>} />
+          <Route path="*" element={<Notfound />} />
+          <Route path="/refhook" element={<Refhook />} />
+          <Route path="/auth-demo" element={<AuthDemo />} />
         </Routes>
       </div>
     </BrowserRouter>

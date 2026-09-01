@@ -11,16 +11,18 @@ const Productapicall = () => {
         setLoading(true)
         setError(null)
 
-        const response = await fetch('/api/products')
+        const response = await fetch('http://localhost:5000/api/products')
 
         if (!response.ok) {
           throw new Error('Error while fetching API')
         }
 
         const data = await response.json()
+        console.log('Products:', data)
         setProducts(data)
       } catch (error) {
         console.log(error)
+        setError(error.message)
       } finally {
         setLoading(false)
       }
