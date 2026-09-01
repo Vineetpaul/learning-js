@@ -14,7 +14,7 @@ const users = [
     id: 1,
     name: 'demo',
     email: 'demo@example.com',
-    password: '$2b$10$y8L5N9h0ofV9xK4E.szi2uQ0.Z.BJ4UXlI0B4YwYhI5Q0i5mLIG5q',
+    password: '$2a$10$U0G2kqN6mRNaqbH9sV1uQeqBaQvG4BPTkoNQf3QdNfWZkQ3qk7eWe',
   },
 ];
 
@@ -25,9 +25,8 @@ const requireAuth = (req, res, next) => {
     return res.status(401).json({ message: 'Token missing' });
   }
 
-  const token = authHeader.split(' ')[1];
-
   try {
+    const token = authHeader.split(' ')[1];
     const decoded = require('./auth').verifyToken(token);
     req.user = decoded;
     next();

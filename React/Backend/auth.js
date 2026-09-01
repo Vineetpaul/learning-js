@@ -1,11 +1,10 @@
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
 const JWT_SECRET = 'learning-secret-key';
 
 const hashPassword = async (plainPassword) => {
-  const salt = await bcrypt.genSalt(10);
-  return await bcrypt.hash(plainPassword, salt);
+  return await bcrypt.hash(plainPassword, 10);
 };
 
 const comparePassword = async (plainPassword, hashedPassword) => {
