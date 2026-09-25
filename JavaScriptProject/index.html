@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Tracker</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+
+```
+<header class="header">
+    <div class="container">
+        <h1>Job Application Tracker</h1>
+        <p>Track and manage your job applications</p>
+    </div>
+</header>
+
+<main class="container">
+
+    <!-- Dashboard -->
+    <section class="dashboard">
+        <h2>Dashboard</h2>
+
+        <div class="stats">
+
+            <div class="stat-card">
+                <h3>Total Applications</h3>
+                <p id="total-applications">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Applied</h3>
+                <p id="applied-count">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Interview</h3>
+                <p id="interview-count">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Rejected</h3>
+                <p id="rejected-count">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Average Salary</h3>
+                <p id="average-salary">₹0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Highest Salary</h3>
+                <p id="highest-salary">₹0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Lowest Salary</h3>
+                <p id="lowest-salary">₹0</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Applications -->
+    <section class="applications-section">
+
+        <div class="section-header">
+            <h2>Applications</h2>
+        </div>
+
+        <div id="applications-container" class="applications-grid">
+            <!-- JavaScript will render applications here -->
+        </div>
+
+    </section>
+
+    <section class="form-section">
+    <h2>Add Application</h2>
+
+
+<form id="application-form">
+
+    <div class="form-group">
+        <label for="company">Company</label>
+        <input type="text" id="company" name="company" required>
+    </div>
+
+    <div class="form-group">
+        <label for="role">Role</label>
+        <input type="text" id="role" name="role" required>
+    </div>
+
+    <div class="form-group">
+        <label for="location">Location</label>
+        <input type="text" id="location" name="location" required>
+    </div>
+
+    <div class="form-group">
+        <label for="salary">Salary</label>
+        <input type="number" id="salary" name="salary" required>
+    </div>
+
+    <div class="form-group">
+        <label for="status">Status</label>
+        <select id="status" name="status" required>
+            <option value="Applied">Applied</option>
+            <option value="In Review">In Review</option>
+            <option value="Interview">Interview</option>
+            <option value="Accepted">Accepted</option>
+            <option value="Rejected">Rejected</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="appliedDate">Applied Date</label>
+        <input type="date" id="appliedDate" name="appliedDate" required>
+    </div>
+
+    <div class="form-group">
+        <label for="skills">Skills</label>
+        <input
+            type="text"
+            id="skills"
+            name="skills"
+            placeholder="JavaScript, React, Node"
+            required
+        >
+    </div>
+
+    <div class="form-group">
+        <label for="notes">Notes</label>
+        <textarea id="notes" name="notes" rows="4"></textarea>
+    </div>
+
+    <button type="submit">Add Application</button>
+
+</form>
+
+
+</section>
+
+
+</main>
+
+<script type="module" src="JS/Components/app.js"></script>
+```
+
+</body>
+</html>
