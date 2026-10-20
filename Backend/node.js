@@ -139,46 +139,46 @@
 
 
 
-const express = require('express');
-const app = express();
+// const express = require('express');
+// const app = express();
 
-// Using built in middleware for parsing the data
-app.use(express.json());
-
-
-// creating some middleware for auth, validation, etc
-const loginMiddleware = function (req,res,next){
-  console.log("Login in..")
-  next();
-}
-app.use(loginMiddleware)
-
-const authMiddleware = function (req,res,next){
-  console.log('checking the token')
-  next()
-}
-
-app.use(authMiddleware)
-
-const validateMiddleware = function (req,res,next){
-  console.log('validate the token')
-  next()
-}
-app.use(validateMiddleware)
+// // Using built in middleware for parsing the data
+// app.use(express.json());
 
 
-app.get('/',(req,res)=>{
-  return res.status(200).json({
-    message:"Welcome Home"
-  })
-})
+// // creating some middleware for auth, validation, etc
+// const loginMiddleware = function (req,res,next){
+//   console.log("Login in..")
+//   next();
+// }
+// app.use(loginMiddleware)
 
-app.get('/users/profile', (req,res)=>{
-  return res.status(200).json({
-    message:"This is your profile"
-  })
-})
+// const authMiddleware = function (req,res,next){
+//   console.log('checking the token')
+//   next()
+// }
 
-app.listen(3000, ()=>{
-  console.log("listening http://localhost:3000")
-})
+// app.use(authMiddleware)
+
+// const validateMiddleware = function (req,res,next){
+//   console.log('validate the token')
+//   next()
+// }
+// app.use(validateMiddleware)
+
+
+// app.get('/',(req,res)=>{
+//   return res.status(200).json({
+//     message:"Welcome Home"
+//   })
+// })
+
+// app.get('/users/profile', (req,res)=>{
+//   return res.status(200).json({
+//     message:"This is your profile"
+//   })
+// })
+
+// app.listen(3000, ()=>{
+//   console.log("listening http://localhost:3000")
+// })
