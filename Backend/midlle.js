@@ -15,5 +15,15 @@ next();
 
 
 const studentMiddle = function(req,res,next){
-    console.log("")
+    console.log("Checking student access");
+
+    if (!req.user) {
+        return res.status(401).send("Authentication required");
+    }
+
+    if (req.user.role !== "student") {
+        return res.status(403).send("Student access only");
+    }
+
+    next();
 }
